@@ -1,0 +1,44 @@
+
+<h2>Voter</h2>
+
+
+<span ng-repeat="alternative in alternatives">
+  <h4>{{alternative.name}}</h4>
+  <div ng-repeat="criterion in criteria" repeat-done="layoutDone()">
+    {{criterion.name}}
+    <br/>
+    <input criteriaid="{{$parent.alternative.$id}}{{criterion.$id}}" type="text" class="slider"
+           data-slider-min="0" data-slider-max="10" data-slider-value="0" data-slider-tooltip="hide">
+
+    <input id="{{$parent.alternative.$id}}{{criterion.$id}}" type="text" ng-model="alternative.criteria[criterion.$id].votes[getUser()]"
+           ng-change="saveAlternative(alternative)" style="display: none;">
+
+    <span>{{alternative.criteria[criterion.$id].votes[getUser()]}}</span>
+
+
+
+  </div>
+</span>
+<!--<button ng-click="logout()" class="btn btn-primary">logout</button>-->
+
+  <br><br>
+<!-- Google Code for Matrix Vote Page Conversion Page -->
+<script type="text/javascript">
+  /* <![CDATA[ */
+  var google_conversion_id = 1071161858;
+  var google_conversion_language = "en";
+  var google_conversion_format = "2";
+  var google_conversion_color = "ffffff";
+  var google_conversion_label = "pwLnCIO9hFoQgsTi_gM";
+  var google_remarketing_only = false;
+  /* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+  <div style="display:inline;">
+    <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1071161858/?label=pwLnCIO9hFoQgsTi_gM&amp;guid=ON&amp;script=0"/>
+  </div>
+</noscript>
+
+

@@ -1,0 +1,9 @@
+{
+  "firebase": "decisionmatrixlive",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
